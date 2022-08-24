@@ -35,14 +35,7 @@ function Date(props) {
 
 export default Date;
 
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { id: "1" } }],
-    fallback: true,
-  };
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const response = await axios.post(
     "http://localhost:3000/api/getProductOrderDetails",
     {

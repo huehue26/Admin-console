@@ -3,7 +3,7 @@ import LineChart from "react-linechart";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-function index(props) {
+function Home(props) {
   const route = useRouter();
   const data = [
     {
@@ -34,9 +34,9 @@ function index(props) {
   );
 }
 
-export default index;
+export default Home;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const response = await axios.get(
     "http://localhost:3000/api/getPlotCoordinates"
   );
