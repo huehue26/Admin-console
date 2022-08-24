@@ -37,7 +37,7 @@ export default Date;
 
 export async function getServerSideProps(context) {
   const response = await axios.post(
-    "http://localhost:3000/api/getProductOrderDetails",
+    "https://final-console-eglstv94r-somesh24.vercel.app/api/getProductOrderDetails",
     {
       id: context.params.id,
     }

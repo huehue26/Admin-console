@@ -38,7 +38,7 @@ export default Home;
 
 export async function getServerSideProps(context) {
   const response = await axios.get(
-    "http://localhost:3000/api/getPlotCoordinates"
+    "https://final-console-eglstv94r-somesh24.vercel.app/api/getPlotCoordinates"
   );
   return {
     props: { ...response.data },
